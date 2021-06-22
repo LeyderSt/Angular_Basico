@@ -1,0 +1,30 @@
+
+
+<h1>{{personaje}}</h1>
+
+<dl>
+    <td>Personaje: </td>
+    <dd>{{personaje}}</dd>
+
+    <td>Nivel: </td>
+    <dd>{{nivel}}</dd>
+
+    <td>Funcion: </td>
+    <dd>{{obtenerPersonaje()}}</dd>
+
+    <!--
+     Esta funcion se usa para devolver en mayuscula el texto      
+        <td>Nombre</td>
+        <dd>{{personaje.toUpperCase()}}</dd> 
+     -->
+
+    <td>Capitalizado: </td>
+    <dd>{{PersonajeMayus}}</dd>
+
+
+
+</dl>
+
+
+<button (click) = 'CambiarPersonaje()'>Cambiar Personaje</button>
+<button (click) = 'CambiarNivel()'>Modificar Nivel</button>

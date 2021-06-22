@@ -1,0 +1,34 @@
+<p>listado de Personajes!</p>
+
+
+
+<ul>
+ <!-- 
+ el *ngFor es el ciclo for,se encarga de enlistar todos los campos de un arreglo asignandole a una variable el valor 
+ y mostrandola en el transcurso de la ejecucion, cuando creamos el let i = index estamos mostrando su
+ posicion en el arreglo  
+-->
+    <li *ngFor="let personaje of Personajes; let i = index"> 
+       {{i + 1}}  {{personaje}}
+    </li>
+</ul>
+    <div *ngIf="Borrados; else noborrado" >
+    <!-- 
+    el *ngIf es un condicional la cual debe regresar true o false
+    -->
+        <h3>Personaje Borrado: <small>{{Borrados}}</small>  </h3>
+        
+    </div>
+    <!-- 
+    el ng-template es un componente de angular el cual basado en su condicion
+    nos muestra un dato. tambien conocido como referencia local (#noborrado) 
+    -->
+    <ng-template #noborrado>
+        <h3>No se han borrado Personajes</h3>
+    </ng-template>
+    
+
+    <button (click)="borrarPersonaje()">
+        Borrar Personaje
+    </button>
+
